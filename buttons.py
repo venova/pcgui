@@ -21,7 +21,7 @@ def beenclicked():
 	#for line in lines:
 	#	tex.write(lines)
 
-
+	text1.delete('1.0', END) 
 	abc=text2.get("1.0",END)
 	tkinter.messagebox.showinfo(title="compiling", message ="done with sucess")
 	text1.insert(INSERT,'\\begin{document}\n\n')
@@ -37,6 +37,7 @@ def quit():
 	app.destroy()
 		
 def nopen():
+	text2.delete('1.0', END) 
 	fin=open(tkinter.filedialog.askopenfilename(filetypes= (("md files","*.md"),("All files","*.*"))),'r')
 	lines=fin.read()
 	for line in lines:
@@ -66,10 +67,8 @@ def savetex():
  	   
 def nNew():
 	mlabel =Label(app,text="new").pack()
-	#text2.del()
-	
-	text2="null"
-	#text2.insert(INSERT,"")
+	text1.delete('1.0', END) 
+	text2.delete('1.0', END) 
 	return
 
 def help():
