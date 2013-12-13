@@ -68,7 +68,16 @@ def nNew():
 	return
 
 def help():
-	tkMessageBox.showinfo(title="Help", message ="**Markdown** allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML) whereas **LaTeX** is a document preparation system and document markup language." )
+	app1 =Tkinter.Tk()
+	app1.title("readme")
+	app1.geometry('350x550')
+	#labelText = StringVar()
+	#labelText.set('click :D :D :D')
+	#label1 = Label(app1, textvariable = labelText, height = 4)
+	#label1.pack(side="top",fill="both")
+	text3 = Tkinter.Text(app1)
+	text3.pack(fill="both",expand=50)
+	text3.insert(INSERT,'**Markdown** allows you to write using an easy-to-read,\n easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML) \nwhereas **LaTeX** is a document preparation system and document markup language."')
 	return
 
 run= Tkinter.Button(app, text = "run",activebackground='blue', width = 5,command = beenclicked).pack(side="top", fill='both')
