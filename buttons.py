@@ -37,12 +37,12 @@ def quit():
 	app.destroy()
 		
 def nopen():
-	#md=open("abc.md",'w')
- 	#fin=open(tkinter.filedialog.askopenfilename(filetypes= (("md files","*.md"),("All files","*.*"))),'w')
- 	text2.insert(INSERT,'\end{document}')
- 	text2.insert(INSERT,(fin.get(0.0,END)))
- 	return 
- 	
+	fin=open(tkinter.filedialog.askopenfilename(filetypes= (("md files","*.md"),("All files","*.*"))),'r')
+	lines=fin.read()
+	for line in lines:
+		text2.insert(INSERT,lines)
+		return 
+
  	
 def savemd():
       """get a filename and save the text in the editor widget"""
